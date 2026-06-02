@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth - Portal Login</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Access the secure member portal with this premium responsive login interface, designed with custom validation alerts.">
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sticky Reusable Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Container -->
+    <main class="container my-auto py-5 d-flex align-items-center justify-content-center" style="min-height: calc(100vh - 160px);">
+        <div class="row justify-content-center w-100">
+            <div class="col-lg-5 col-md-8 col-sm-10">
+                
+                <!-- Glassmorphism Card -->
+                <div class="glass-card p-4 p-sm-5">
+                    
+                    <div class="text-center mb-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-indigo-500 rounded-circle mb-3" style="width: 60px; height: 60px; background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.3);">
+                            <i class="bi bi-person-badge-fill text-indigo-400 fs-3 text-primary"></i>
+                        </div>
+                        <h2 class="text-white fw-bold">Welcome Back</h2>
+                        <p class="text-secondary-50 small">Log in to manage your account details</p>
+                    </div>
+
+                    <!-- Bootstrap Alert Container -->
+                    <div id="login-alert-container"></div>
+
+                    <!-- Login Form -->
+                    <form id="loginForm" novalidate>
+                        
+                        <!-- Email / Username Input -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="loginIdentifier" placeholder="Username or Email" required>
+                            <label for="loginIdentifier"><i class="bi bi-person me-2"></i>Username or Email</label>
+                            <div class="invalid-feedback">Please enter your username or email address.</div>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="form-floating mb-3 password-field-container">
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                            <label for="loginPassword"><i class="bi bi-key me-2"></i>Password</label>
+                            
+                            <button type="button" class="password-toggle-btn" data-target="loginPassword" aria-label="Toggle Password Visibility">
+                                <i class="bi bi-eye-slash-fill"></i>
+                            </button>
+                            
+                            <div class="invalid-feedback">Password is required.</div>
+                        </div>
+
+                        <!-- Extras Row -->
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="loginRemember">
+                                <label class="form-check-label text-secondary small" for="loginRemember">Remember me</label>
+                            </div>
+                            <a href="#" class="small text-decoration-none text-indigo-400" style="color: #a5b4fc;" onclick="event.preventDefault(); alert('Forgot Password simulation triggered! Check console or mock databases.');">Forgot Password?</a>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-primary-gradient btn-lg w-100">
+                                <i class="bi bi-box-arrow-in-right me-2"></i>Login
+                            </button>
+                        </div>
+
+                        <!-- Registration Link -->
+                        <div class="text-center text-secondary small mt-3">
+                            Don't have an account? <a href="register.html" class="text-decoration-none text-indigo-400 fw-bold" style="color: #a5b4fc;">Register Now</a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Reusable Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Terms & Conditions Modal (Required for Reusable Footer Link) -->
+    <div class="modal fade glass-modal" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel"><i class="bi bi-file-earmark-text text-primary me-2"></i>Terms and Conditions</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-white-50">Welcome to SecureAuth. By signing up to this platform, you agree to comply with our dummy authentication simulation guidelines.</p>
+                    <h6 class="text-white fw-bold mt-3">1. Data Storage</h6>
+                    <p class="text-white-50">This is a frontend-only demonstration. No data is transmitted, processed, or saved to any database. Inputs are handled temporarily within the local JavaScript application runtime environment.</p>
+                    <h6 class="text-white fw-bold mt-3">2. Password Security</h6>
+                    <p class="text-white-50">Please do not use real passwords. Even though this interface calculates strength checks locally and does not transmit data over the web, we advise against entering production passwords in test environments.</p>
+                    <h6 class="text-white fw-bold mt-3">3. UI/UX Rights</h6>
+                    <p class="text-white-50">This prototype has been prepared strictly as an internship evaluation project. All visual graphics, stylesheets, scripts, and document templates are free for modification and educational purposes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary border-0" data-bs-dismiss="modal" style="background: rgba(255,255,255,0.1);">Close</button>
+                    <button type="button" class="btn btn-primary-gradient" data-bs-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Custom Application Logic -->
+    <script src="js/script.js"></script>
+</body>
+</html>
