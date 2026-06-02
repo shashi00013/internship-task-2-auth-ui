@@ -2,10 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SecureAuth</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth - Modern Authentication System</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Explore SecureAuth, a premium responsive login and registration frontend UI featuring real-time validations, strength meters, and glassmorphism styling.">
+    <meta name="keywords" content="Authentication System, HTML5, CSS3, Bootstrap 5, Glassmorphism, Form Validation, AJAX simulation">
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- Sticky Reusable Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content Area -->
+    <main class="container my-auto py-5">
+        
+        <!-- Hero Section -->
+        <section class="text-center py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <span class="feature-badge">
+                        <i class="bi bi-stars"></i> Interactive Frontend Assignment
+                    </span>
+                    <h1 class="hero-title mb-4">Authentication System UI</h1>
+                    <p class="hero-subtitle mb-5">
+                        Experience a premium, responsive user gateway designed with modern glassmorphism, dynamic password checkouts, and instant simulated AJAX username validations.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="login.html" class="btn btn-primary-gradient px-4 py-3 fs-6">
+                            <i class="bi bi-box-arrow-in-right me-2"></i>Access Member Portal
+                        </a>
+                        <a href="register.html" class="btn btn-outline-light border-secondary hover-bg-light px-4 py-3 fs-6 rounded-3" style="transition: var(--transition-smooth); background: rgba(255, 255, 255, 0.02);">
+                            <i class="bi bi-person-plus me-2"></i>Create New Account
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Showcase Grid -->
+        <section class="py-5">
+            <div class="row g-4">
+                <!-- Feature 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+                        <h4 class="h5 text-white fw-bold">AJAX Simulation</h4>
+                        <p class="text-secondary mb-0">Simulates real-time server checking for username availability with loader spinner feedback.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4 class="h5 text-white fw-bold">Regex Verification</h4>
+                        <p class="text-secondary mb-0">Multi-tier password complexity evaluation using visual meters and feedback checklists.</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h4 class="h5 text-white fw-bold">Ultra Responsive</h4>
+                        <p class="text-secondary mb-0">Fluid layouts built with Bootstrap grid columns mapping perfectly across devices.</p>
+                    </div>
+                </div>
+                <!-- Feature 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <h4 class="h5 text-white fw-bold">Glassmorphism</h4>
+                        <p class="text-secondary mb-0">Curated background gradient blends, card blurs, and hover scale micro-animations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Accounts Section -->
+        <section class="py-4">
+            <div class="glass-card p-4 text-center col-lg-8 mx-auto">
+                <h5 class="text-white fw-bold mb-3"><i class="bi bi-database-check text-info me-2"></i>Simulated Database Accounts</h5>
+                <p class="text-secondary mb-3">To demonstrate username collision checks in the registration view, use these already-registered names:</p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="badge bg-secondary py-2 px-3 text-white">admin</span>
+                    <span class="badge bg-secondary py-2 px-3 text-white">test</span>
+                    <span class="badge bg-secondary py-2 px-3 text-white">user123</span>
+                    <span class="badge bg-secondary py-2 px-3 text-white">shashi</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Reusable Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Terms & Conditions Modal -->
+    <div class="modal fade glass-modal" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel"><i class="bi bi-file-earmark-text text-primary me-2"></i>Terms and Conditions</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-white-50">Welcome to SecureAuth. By signing up to this platform, you agree to comply with our dummy authentication simulation guidelines.</p>
+                    <h6 class="text-white fw-bold mt-3">1. Data Storage</h6>
+                    <p class="text-white-50">This is a frontend-only demonstration. No real data is transmitted, processed, or saved to any database. Inputs are handled temporarily within the local JavaScript application runtime environment.</p>
+                    <h6 class="text-white fw-bold mt-3">2. Password Security</h6>
+                    <p class="text-white-50">Please do not use real passwords. Even though this interface calculates strength checks locally and does not transmit data over the web, we advise against entering production passwords in test environments.</p>
+                    <h6 class="text-white fw-bold mt-3">3. UI/UX Rights</h6>
+                    <p class="text-white-50">This prototype has been prepared strictly as an internship evaluation project. All visual graphics, stylesheets, scripts, and document templates are free for modification and educational purposes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary border-0" data-bs-dismiss="modal" style="background: rgba(255,255,255,0.1);">Close</button>
+                    <button type="button" class="btn btn-primary-gradient" data-bs-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Custom Application Logic -->
+    <script src="js/script.js"></script>
 </body>
 </html>
