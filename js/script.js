@@ -234,7 +234,7 @@ function initLoginPage(form) {
             
             // Simulation logic
             const value = identifierInput.value.trim().toLowerCase();
-            if (value === "admin" || value === "test" || value === "shashi@example.com" || value === "user123") {
+            if (value === "admin" || value === "test" || value === "shashi@example.com" || value === "user123" || value === "test123") {
                 displayAlert(alertContainer, "success", `Welcome back! Login Successful. Redirecting...`);
                 setTimeout(() => {
                     window.location.href = "index.html";
@@ -316,7 +316,7 @@ function initRegisterPage(form) {
             spinner.style.display = "none";
             usernameChecking = false;
             
-            const existingUsers = ["admin", "test", "user123", "shashi"];
+            const existingUsers = ["admin", "test", "user123", "shashi", "test123"];
             const isTaken = existingUsers.includes(username.toLowerCase());
             
             if (isTaken) {

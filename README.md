@@ -25,7 +25,7 @@ A premium, responsive **Login & Registration Portal UI** built for an internship
 
 4. **Advanced Registration Form:**
    - Multi-field checklist validation (Full Name, Username, Email, Mobile, Password, Confirm Password).
-   - **Debounced AJAX Username availability check:** Simulates server round-trip with a loading spinner and checks for duplicates against a mock database list (`admin`, `test`, `user123`, `shashi`).
+   - **Debounced AJAX Username availability check:** Simulates server round-trip with a loading spinner and checks for duplicates against a mock database list (`admin`, `test`, `user123`, `shashi`, `test123`).
    - **Real-Time Password Strength Meter:** Evaluates password complexity using regular expressions, displaying an color-shifting progress bar (Red/Orange/Yellow/Green) and checklist flags.
    - **Real-Time Match Validation:** Checks if the password matches the confirmation field inline and locks form submissions if they mismatch.
    - Interactive modal popup displaying custom Terms & Conditions.
